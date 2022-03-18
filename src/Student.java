@@ -6,7 +6,6 @@ public class Student {
     private int numOfCourses;
     private int balance;
 
-
     public Student(String firstName, String lastName, String email, int studentID, int numOfCourses, int balance){
         this.firstName = firstName;
         this.lastName = lastName;
@@ -14,7 +13,6 @@ public class Student {
         this.studentID = studentID;
         this.numOfCourses = numOfCourses;
         this.balance = balance;
-
     }
 
     public void setFirstName(String newFirstName){
@@ -63,8 +61,6 @@ public class Student {
 
     public void makePayment(int balance, int payment){
         this.balance -= payment;
-
-
     }
 
     public static void main(String[] args) {
@@ -74,8 +70,5 @@ public class Student {
         s.setBalance(s.numOfCourses);
         s.makePayment(s.balance, 500);
         System.out.println(s.getBalance());
-
     }
-
-
 }
