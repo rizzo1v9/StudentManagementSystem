@@ -1,5 +1,6 @@
 import java.sql.*;
 import java.util.Scanner;
+
 // This class will connect to the MySQL DB and update it using the Student class
 public class JDBCTest {
 
@@ -25,7 +26,6 @@ public class JDBCTest {
                 // Using the prepare statement to insert the values from the Student object
                 pst.setString(1, s.getFirstName());
                 pst.setString(2, s.getLastName());
-
                 // This while loop checks to see if there is already a student with the email trying to be assigned
                 // If there is, the new email being entered will have the number at the end of it increase by 1
                 // If not, all new emails start at 0
@@ -39,6 +39,7 @@ public class JDBCTest {
                 }
                 pst.setDouble(4, s.getBalance());
                 pst.executeUpdate();
+
             } catch (Exception e) {
                 e.printStackTrace();
             }

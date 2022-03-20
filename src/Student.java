@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 // Basic student class which will prompt the user to enter in their details
-
 public class Student {
 
     private int studentID = 0;
@@ -14,7 +13,6 @@ public class Student {
 
     // The constructor will create the format required to generate unique email addresses for every student
     // It will also generate a mock balance of 2500 per class enrolled in
-
     public Student(){
         Scanner in = new Scanner(System.in);
         System.out.println("Enter the student's first name: ");
@@ -30,7 +28,6 @@ public class Student {
     }
 
     // Getters and Setters
-
     public void setStudentID(int newStudentID){
         this.studentID = newStudentID;
     }
@@ -88,7 +85,6 @@ public class Student {
     }
 
     // Method so the student can make a payment
-
     public void makePayment(double balance, double payment){
         this.balance -= payment;
     }
