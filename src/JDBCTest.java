@@ -8,17 +8,17 @@ public class JDBCTest {
 
         // Creating a Student object and initializing count to 0 to create unique email addresses
         Scanner in = new Scanner(System.in);
-
             Student s = new Student();
             int count = 0;
             try {
+
+
                 // Creating a connection to the MySQL DB
                 Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc-test", "root", "lucas123");
 
                 // Creating statements and result sets for the different queries we want to execute along with the prepare statement to insert the values
                 Statement statement1 = connection.createStatement();
                 Statement statement2 = connection.createStatement();
-                Statement statement3 = connection.createStatement();
                 ResultSet sE = statement1.executeQuery("SELECT email FROM student\n" + "WHERE email LIKE '%" + s.getEmailSnip() + "%'");
                 ResultSet sE1 = statement2.executeQuery("SELECT email FROM student");
                 PreparedStatement pst = connection.prepareStatement("INSERT INTO student (firstName, lastName, email, balance) VALUES (?,?,?,?)");
@@ -44,4 +44,5 @@ public class JDBCTest {
                 e.printStackTrace();
             }
         }
+
     }

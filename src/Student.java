@@ -24,7 +24,6 @@ public class Student {
         System.out.println("Enter the number of courses the student is taking: ");
         this.numOfCourses = Integer.parseInt(in.nextLine());
         this.balance = numOfCourses * 2500;
-        System.out.println("Press Q to quit");
     }
 
     // Getters and Setters
